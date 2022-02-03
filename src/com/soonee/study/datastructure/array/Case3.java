@@ -38,7 +38,7 @@ public class Case3 {
 	}
 
 	public static void main(String[] args) {
-		String trueString = "Mr John Smith";
+		String trueString = "Hello World, URLify!";
 		char[] str = trueString.toCharArray();
 		System.out.println(str);
 		char[] result = repaceSpace(str, trueString.length());
