@@ -26,10 +26,12 @@ public class Case4 {
 		int a = Character.getNumericValue('a');
 		int z = Character.getNumericValue('z');
 		int val = Character.getNumericValue(c);
-		if(a <= val && val <= z) return val - c;
+		if(a <= val && val <= z) return val - a;
 		return -1;
 	}
 
+	// hash table 개념을 이용해서 홀수인지 아닌지 체크?
+	// 계수 정렬과 다른 점은?
 	boolean isPermutationOfPalindrome(String phrase) {
 		int countOdd = 0;
 		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
@@ -43,6 +45,9 @@ public class Case4 {
 			}
 		}
 
+		for(int i = 0; i < table.length; i++) {
+			System.out.printf("table[ %c ] : %d\n", i + 'a', table[i]);
+		}
 		return countOdd <= 1;
 	}
 
