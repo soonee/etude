@@ -20,32 +20,36 @@ public class Case7 {
 		for(int firstStart = 0; firstStart < firstFinish; firstStart++) {
 			System.out.println("=================================");
 			int secondFinish = matrixLength - 1 - firstStart;
+			// layer가 한 단계 축소됨
 			for(int secondStart = firstStart; secondStart < secondFinish; secondStart++) {
 				System.out.println("------------------------------------------------------------------");
 				int offset = secondStart - firstStart;
 				char temp = matrix[firstStart][secondStart];
-				// 왼쪽아래 -> 왼쪽 위
-				System.out.printf("(%d, %d): %c -> (%d, %d) : %c\n",
-						firstStart, secondStart, matrix[firstStart][secondStart],
-						secondFinish - offset, firstStart, matrix[secondFinish - offset][firstStart]
+				System.out.printf("firstStart:%d, firstFinish:%d, secondStart:%d, secondFinish:%d, offset:%d\n",
+						firstStart, firstFinish, secondStart, secondFinish, offset
+				);
+				// 왼쪽 아래 -> 왼쪽 위
+				System.out.printf("(%d, %d): %c -> (%d, %d) : %c // \n",
+						secondFinish - offset, firstStart, matrix[secondFinish - offset][firstStart],
+						firstStart, secondStart, matrix[firstStart][secondStart]
 				);
 				matrix[firstStart][secondStart] = matrix[secondFinish - offset][firstStart];
 				// 오른쪽 아래 -> 왼쪽 아래
 				System.out.printf("(%d, %d): %c -> (%d, %d) : %c\n",
-						secondFinish - offset, firstStart, matrix[secondFinish - offset][firstStart],
-						secondFinish, secondFinish - offset, matrix[secondFinish][secondFinish - offset]
+						secondFinish, secondFinish - offset, matrix[secondFinish][secondFinish - offset],
+						secondFinish - offset, firstStart, matrix[secondFinish - offset][firstStart]
 				);
 				matrix[secondFinish - offset][firstStart] = matrix[secondFinish][secondFinish - offset];
 				// 오른쪽 위 -> 오른쪽 아래
 				System.out.printf("(%d, %d): %c -> (%d, %d) : %c\n",
-						secondFinish, secondFinish - offset, matrix[secondFinish][secondFinish - offset],
-						secondStart, secondFinish, matrix[secondStart][secondFinish]
+						secondStart, secondFinish, matrix[secondStart][secondFinish],
+						secondFinish, secondFinish - offset, matrix[secondFinish][secondFinish - offset]
 				);
 				matrix[secondFinish][secondFinish - offset] = matrix[secondStart][secondFinish];
-				// 왼쪽 위 ->
+				// 왼쪽 위 -> 오른쪽 위
 				System.out.printf("(%d, %d): %c -> (%d, %d) : %c\n",
-						secondStart, secondFinish, matrix[secondStart][secondFinish],
-						firstStart, secondStart, temp
+						firstStart, secondStart, temp,
+						secondStart, secondFinish, matrix[secondStart][secondFinish]
 				);
 				matrix[secondStart][secondFinish] = temp;
 			}
