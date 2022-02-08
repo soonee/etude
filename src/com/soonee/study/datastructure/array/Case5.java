@@ -49,7 +49,7 @@ public class Case5 {
 		}
 		return true;
 	}
-	boolean oneEditAway(String first, String second) {
+	boolean oneEditAway1(String first, String second) {
 		if(first.length() == second.length()) {
 			return replace(first, second);
 		}
@@ -62,12 +62,40 @@ public class Case5 {
 		return false;
 	}
 
+	boolean oneEditAway2(String first, String second) {
+		// 길이 체크
+		if(Math.abs(first.length() - second.length()) > 1) {
+			return false;
+		}
+		// 길이가 짧은 문자열이 s1, 긴 문자열이 s2
+		String s1 = first.length() < second.length() ? first : second;
+		String s2 = first.length() < second.length() ? second : first;
+		int index1 = 0;
+		int index2 = 0;
+		boolean foundDifference = false;
+		while(index1 < s1.length() && index2 < s2.length()) {
+			char c1 = s1.charAt(index1);
+			char c2 = s2.charAt(index2);
+			if(c1 != c2) {
+				// 반드시 첫 번째로 다른 문자여야 한다
+				if(foundDifference) return false;
+				foundDifference = true;
+				// 교체의 경우 짧은 문자열의 인덱스 증가
+				if(s1.length() == s2.length()) index1++;
+			} else {
+				index1++;
+			}
+			index2++;
+		}
+		return true;
+	}
+
 	public static void main(String[] args) {
 		Case5 c5 = new Case5();
-		boolean result1 = c5.oneEditAway("pale", "ale");
-		boolean result2 = c5.oneEditAway("pale", "bake");
-		System.out.println(result1);
-		System.out.println(result2);
+//		boolean result2 = c5.oneEditAway1("pale", "pake");
+//		System.out.println(result2);
+		boolean result3 = c5.oneEditAway2("pale", "pakle");
+		System.out.println(result3);
 	}
 
 }
