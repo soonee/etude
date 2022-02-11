@@ -20,6 +20,18 @@ public class SimplexLinkedList {
 	public Node head = null;
 	public Node tail = null;
 
+	public SimplexLinkedList() {
+		SimplexLinkedList List = new SimplexLinkedList();
+		List.add(9);
+		List.add(1);
+		List.add(1);
+		List.add(3);
+		List.add(4);
+		List.add(8);
+		List.add(2);
+		List.add(1);
+	}
+
 	public void add(int data) {
 		Node newNode = new Node(data);
 		if (head == null) {
@@ -44,19 +56,4 @@ public class SimplexLinkedList {
 		System.out.println();
 	}
 
-	public static void main(String[] args) {
-		SimplexLinkedList List = new SimplexLinkedList();
-
-		//Adding data to the list
-		List.add(9);
-		List.add(1);
-		List.add(1);
-		List.add(3);
-		List.add(4);
-		List.add(8);
-		List.add(2);
-		List.add(1);
-		System.out.println("연결리스트 초기화: ");
-		List.print();
-	}
 }
