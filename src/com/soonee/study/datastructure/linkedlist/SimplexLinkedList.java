@@ -20,8 +20,7 @@ public class SimplexLinkedList {
 	public Node head = null;
 	public Node tail = null;
 
-	public SimplexLinkedList() {
-		SimplexLinkedList List = new SimplexLinkedList();
+	public void init(SimplexLinkedList List) {
 		List.add(9);
 		List.add(1);
 		List.add(1);
