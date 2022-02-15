@@ -15,5 +15,17 @@ public class Case3 extends SimplexLinkedList {
 		return true;
 	}
 	public static void main(String[] args) {
+		// 연결리스트 초기화
+		Case3 c3 = new Case3();
+		c3.init(c3);
+		c3.print();
+
+		// 연결리스트 k번쨰 찾기
+		Case2 c2 = new Case2();
+		SimplexLinkedList.Node node = c2.kthToLast(c3.head, 3);
+
+		// 중간 노드 삭제
+		c3.deleteNode(node);
+		c3.print();
 	}
 }

@@ -11,7 +11,7 @@ package com.soonee.study.datastructure.linkedlist;
 public class Case2 extends SimplexLinkedList {
 
 	// 재귀식
-	private int printKthToLast(SimplexLinkedList.Node current, int k) {
+	public int printKthToLast(SimplexLinkedList.Node current, int k) {
 		if(current == null) return 0;
 		int index = printKthToLast(current.next, k) + 1;
 		if(index == k) {
@@ -21,7 +21,7 @@ public class Case2 extends SimplexLinkedList {
 	}
 
 	// 비재귀식
-	private SimplexLinkedList.Node kthToLast(SimplexLinkedList.Node head, int k) {
+	public SimplexLinkedList.Node kthToLast(SimplexLinkedList.Node head, int k) {
 		SimplexLinkedList.Node p1 = head;
 		SimplexLinkedList.Node p2 = head;
 
