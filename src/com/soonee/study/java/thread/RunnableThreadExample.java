@@ -10,6 +10,7 @@ public class RunnableThreadExample implements Runnable {
 			while(count < 5) {
 				Thread.sleep(500);
 				count++;
+				System.out.println("In Thread, count is " + count);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("RunnableThread interrupted");
