@@ -14,7 +14,7 @@ public class AlgorithmTest {
 		return;
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		int arraySize = 10;
 		int[] insert = new int[arraySize];
 		int[] quick = new int[arraySize];
