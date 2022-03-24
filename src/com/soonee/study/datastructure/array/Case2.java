@@ -43,7 +43,7 @@ public class Case2 {
 	}
 
 	// test
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		System.out.println( permutation1("abc", "bcd") );
 		System.out.println( permutation2("1234", "3214") );
 	}
