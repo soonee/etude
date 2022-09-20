@@ -1,7 +1,5 @@
 package com.soonee.test.programmers.level1;
 
-import com.soonee.test.TestMain;
-
 public class NewIdRecommendation {
 
 	public static String solution(String new_id) {
