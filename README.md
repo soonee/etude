@@ -16,4 +16,4 @@ boilerplate..
 적어야 할게 또 뭐가 있을까..?
 
 ## 알고리즘 목록
-[약수들의 합 구하기 알고리즘](https://github.com/soonee/etude/blob/master/src/com/soonee/test/programmers/level1/약수들의합알고리즘.md)
+[약수들의 합 구하기 알고리즘](https://github.com/soonee/etude/blob/master/src/com/soonee/test/programmers/level1/약수들의합.md)
