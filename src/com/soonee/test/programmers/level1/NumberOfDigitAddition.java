@@ -2,6 +2,9 @@ package com.soonee.test.programmers.level1;
 
 import java.util.Arrays;
 
+/**
+ * 자릿수 더하기
+ */
 public class NumberOfDigitAddition {
     public static int solution(int n) {
         Integer.toString(n);
