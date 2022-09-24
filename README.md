@@ -16,5 +16,5 @@ boilerplate..
 적어야 할게 또 뭐가 있을까..?
 
 ## 알고리즘 목록
-[약수 구하기](https://github.com/soonee/etude/blob/master/src/com/soonee/readme/약수구하기.md)
+[약수 구하기](https://github.com/soonee/etude/blob/master/src/com/soonee/readme/약수구하기.md)  
 [정수와 실수 판별](https://github.com/soonee/etude/blob/master/src/com/soonee/readme/정수와실수판별.md)
